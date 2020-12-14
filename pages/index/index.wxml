@@ -1,2 +1,11 @@
 <!--index.wxml-->
+<!-- 云数据库 -->
+<button class="btn" bindtap="addData">增加数据</button>
+<button class="btn" bindtap="deleteData" type="primary">增加数据</button>
+<button class="btn" bindtap="qiuhe">云函数加法</button>
+<view wx:if="{{addResult!=null}}">结果是:{{addResult}}</view>
+<button class="btn" bindtap="getOpenId">获取openId</button>
+<view wx:if="{{openId}}">结果是:{{openId}}</view>
+<button class="btn" bindtap="getUsers1">数据库获取数据</button>
+<button class="btn" bindtap="getUsers2">云函数获取数据</button>
 

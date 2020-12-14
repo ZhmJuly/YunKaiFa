@@ -42,7 +42,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.14.1",
   "appid": "wxd8be8be1f117079a",
-  "projectname": "test2",
+  "projectname": "YunKaiFa",
   "debugOptions": {
     "hidedInDevtools": []
   },
@@ -50,6 +50,7 @@
   "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []
