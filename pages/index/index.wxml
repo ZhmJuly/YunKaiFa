@@ -1,11 +1,23 @@
 <!--index.wxml-->
 <!-- 云数据库 -->
 <button class="btn" bindtap="addData">增加数据</button>
-<button class="btn" bindtap="deleteData" type="primary">增加数据</button>
+<!-- <button class="btn" bindtap="deleteData">删除数据</button> -->
 <button class="btn" bindtap="qiuhe">云函数加法</button>
 <view wx:if="{{addResult!=null}}">结果是:{{addResult}}</view>
 <button class="btn" bindtap="getOpenId">获取openId</button>
 <view wx:if="{{openId}}">结果是:{{openId}}</view>
 <button class="btn" bindtap="getUsers1">数据库获取数据</button>
 <button class="btn" bindtap="getUsers2">云函数获取数据</button>
-
+<view>
+  name:<input class="input-text" placeholder="name" value="{{name}}" bindinput="handleName" />
+  age:<input class="input-text" placeholder="age" value="{{age}}" bindinput="handleAge" />
+  address:<input class="input-text" placeholder="address" value="{{address}}" bindinput="handleAddress" />
+</view>
+<view class="list-box">
+  <view class="list-item" wx:for="{{list}}" wx:for-item="item" wx:key="id">
+    <view class="fl">{{item.name}} </view>
+    <view class="fr">
+      <button class="btn" size="mini" data-id="{{item._id}}" bindtap="deleteData">删除</button>
+    </view>
+  </view>
+</view>
