@@ -1,6 +1,6 @@
  //新建项目时，都是基于官方的demo开始，教程从0开始、不基于官方demo
  //云开发 分三步讲 初始化之后
-  /*  1、云数据库
+ /*  1、云数据库
   * 2、云函数
   * 3、云存储
   */
@@ -18,21 +18,37 @@
    onShow() {
      this.getUsers2();
    },
-   handleName(e) {
-     this.setData({
-       name:e.detail.value
+   handleModify(e) {
+     const params  = e.currentTarget.dataset.item
+     let url = '/pages/detail/detail'
+     let isfirst = url.indexOf("?") != -1;
+     for (let key in params) {
+       if (isfirst) {
+         url += `&${key}=${params[key]}`;
+       } else {
+         url += `?${key}=${params[key]}`;
+         isfirst = true;
+       }
+     }
+     wx.navigateTo({
+       url: url,
      })
    },
-   handleAge(e) {
-    this.setData({
-      age:Number(e.detail.value)
-    })
-  },
-  handleAddress(e) {
-    this.setData({
-      address:e.detail.value
-    })
-  },
+   handleName(e) {//输入姓名
+     this.setData({
+       name: e.detail.value
+     })
+   },
+   handleAge(e) { //输入年龄
+     this.setData({
+       age: Number(e.detail.value)
+     })
+   },
+   handleAddress(e) { //输入地址
+     this.setData({
+       address: e.detail.value
+     })
+   },
    addData() {
      const $this = this
      DB.add({
@@ -44,9 +60,9 @@
        success(res) {
          $this.getUsers2();
          $this.setData({
-          name:"",
-          age: null,
-          address: ""
+           name: "",
+           age: null,
+           address: ""
          })
          console.log("addData", res.result)
        },

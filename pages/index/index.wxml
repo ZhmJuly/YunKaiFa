@@ -17,7 +17,8 @@
   <view class="list-item" wx:for="{{list}}" wx:for-item="item" wx:key="id">
     <view class="fl">{{item.name}} </view>
     <view class="fr">
-      <button class="btn" size="mini" data-id="{{item._id}}" bindtap="deleteData">删除</button>
+      <button class="btn small" size="mini" data-id="{{item._id}}" bindtap="deleteData">删除</button>
+      <button class="btn small" size="mini" data-item="{{item}}" bindtap="handleModify">去改</button>
     </view>
   </view>
 </view>

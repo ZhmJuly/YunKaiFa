@@ -2,6 +2,10 @@
   margin-bottom: 10px;
   font-weight: normal;
 }
+.small{
+  font-size: 30rpx!important;
+  margin: 10rpx;
+}
 .input-text{
   border: 1rpx solid #e5e5e5;
   margin:0 30rpx;

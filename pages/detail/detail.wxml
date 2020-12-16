@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  name:<input class="input-text" placeholder="name" value="{{name}}" bindinput="handleName" />
+  age:<input class="input-text" placeholder="age" value="{{age}}" bindinput="handleAge" />
+  address:<input class="input-text" placeholder="address" value="{{address}}" bindinput="handleAddress" />
+</view>
+<button class="btn" bindtap="updateData">确认修改</button>

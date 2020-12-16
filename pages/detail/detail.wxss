@@ -1,0 +1,11 @@
+/* pages/detail/detail.wxss */
+.input-text{
+  border: 1rpx solid #e5e5e5;
+  margin:0 30rpx;
+  height:48rpx;
+  width: 200;
+  padding-left: 20rpx;
+}
+.btn{
+  margin-top: 30rpx;
+}
